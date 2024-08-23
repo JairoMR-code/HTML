@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer HTML</title>
+
+    <meta name="theme" content="#09f">
+    <meta name="description" content="Primer HTML de Jairo Martinez">
+
+    <link rel="icon" type="imagen/jfif" href="/Imagenes/icono.jfif">
+    <style>
+        body{
+            background-color: rgb(216, 194, 132);
+        }
+        p{  
+            max-width: 600px;
+            font-family:Arial, sans-serif;
+            font-size: 14px;
+            color:#333;
+        }
+        ol{
+            max-width: 600px;
+            text-align: left;
+        }
+        table{
+            max-width: 600px;
+            margin: 0;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,
+        td{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        form{
+            max-width: 600px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1> Estructura Básica del Documento de HTML</h1>
+    </header>
+
+        <nav>
+            <a href="#etiquetas"> Etiquetas Básicas</a>
+            <a href="#Video"> Video</a>
+        </nav>
+
+    <main>
+        <p>Este documento HTML tiene un estructura básica que incluye la declaración de DOCTYPE, etiquetas de metadatos como el charset, el viewport y un titulo.
+            Además de ciertos agregados como lo son los metadatos "description" e "theme-color".
+        </p>
+    
+        <!--Imagen descargable-->
+        <a download href="/Imagenes/icono.jfif">
+            <img id="photo-imagen" width="200" height="200" title="Foto del icono de HTML"
+            alt="Una fotografia del icono de HTML"
+            src="/Imagenes/icono.jfif">
+            </a>
+
+    <h2>Encabezado y Propiedades del Texto</h2>
+        <aside> 
+        <!--Listas con las propiedades del texto-->
+            <ul>
+            <li><strong>Através de la etiqueta "strong" este texto aparece en negrita </strong></li>
+            <li> <em>Aqui uso de la etiqueta "em" para que el texto este en cursiva</em>></li>
+            <li><u>Y por último mediante la etiqueta "u" podemos hacer que nuestro texto se subraye</u></li>
+        </ul>
+        </aside>
+            <p>
+            Esto es un breve explicación para mostrar las etiquetas que nos sirven para manejar las diferentes propiedades que se le puede brindar a nuestro texo
+            </p>
+        
+    <article>
+        <header><h3>¿Qué son los elementos de un HTML?</h3>
+        </header>
+            <p>
+                Los elementos son la estructura básica de HTML. Los elementos tienen dos propiedades básicas: atributos y contenido. Tanto los atributos como los 
+                contenidos tiene ciertas restricciones para que el documento HTML se considere válido. Generalmente, un elemento se compone de una etiqueta de 
+                apertura (por ejemplo, <"nombre-de-elemento">) y una etiqueta de cierre correspondiente (por ejemplo, <"/nombre-de-elemento">). Los atributos del 
+                elemento se especifican dentro de la etiqueta de apertura, mientras que el contenido se sitúa entre ambas etiquetas (por ejemplo, 
+                <"nombre-de-elemento atributo="valor">Contenido<"/nombre-de-elemento>"). 
+            </p>
+    </article>
+        <footer>
+            <nav>
+            <small><a href="https://es.wikipedia.org/wiki/HTML" target="_blank">Información más detallada de HTML</a> </small>    
+            </nav>
+        </footer>
+        
+    <h3 id="etiquetas">Etiquetas Básicas</h3>
+            <ol>
+                <li><strong>html</strong>: define el inicio del documento HTML, le indica al navegador que lo que viene a continuación debe ser interpretado como código HTML</li>    
+                <li><strong>script</strong>: incrusta un script en una web, o llama a uno mediante src="url del script"</li>
+                <li><strong>head</strong>: define la cabecera del documento HTML; esta cabecera suele contener información sobre el documento que no se muestra directamente al usuario por ejemplo, el título de la ventana del navegador</li>
+                <li><strong>title</title></strong>:define el título de la página. Por lo general, el título aparece en la barra del titulo encima de la ventana</li>
+            </ol>
+        
+        <footer>
+            <nav>
+                <small><a href="https://carontestudio.com/blog/listado-de-etiquetas-html/" target="_blank">Información sobre todas las etiquetas de HTML</a></small>     
+            </nav>
+        </footer>
+    
+        <!--Video junto al Audio-->
+    <h4 id="Video">Video </h4>
+        <article>
+            <p>
+            El siguiente video es un video integrado mediante las etiquetas de "video" y "audio"
+        </p>
+        </article>
+        <audio controls src="/Imagenes/trailer_1080p.ogg"></audio>
+
+        <video autoplay muted 
+        width="500"
+        height="400"
+        src="/Imagenes/watermarked_preview.mp4">    
+        </video>
+    <div>
+        
+        <!--Tabla-->
+        <h4 >Tabla</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Versión</th>
+                    <th>Año Introducido</th>
+                    <th>Caracteristica fundamental</th>
+                </tr>
+            </thead>    
+            <tbody>
+                <tr>
+                    <td>HTML 1.0</td>
+                    <td>1993</td>
+                    <td>Contención de elementos básicos</td>
+                </tr>
+                <tr>
+                    <td>HTML 2.0</td>
+                    <td>1995</td>
+                    <td>Incluyo elementos más estructurados y formularios</td>
+                </tr>
+                <tr>
+                    <td>HTML 3.2</td>
+                    <td>1997</td>
+                    <td>Añadieron las tablas, script, hojas de esstilo y estructuras más complejas</td>
+                </tr>
+        </table>
+    </div>
+
+<!-- Formulario-->
+    <section>
+    <h5>Formulario de Contacto</h5>
+        <form method="post" action="/">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <div>
+                <label > Nombre: 
+                    <input type="text" name="name"
+                    placeholder="Jairo Martinez" required>
+                 </label>
+                 </div>
+
+                 <label> Email:
+                    <input type="email" name="email"
+                    placeholder="jairoMartinez@hotmail.com" required>
+                 </labe>
+            </fieldset>
+            <fieldset>     
+                <legend>Información Adicional</legend>
+                 <label> Teléfono:
+                    <input type="tel" name="teléfono"
+                    placeholder="2617881092" required>
+                 </label>
+            </fieldset>
+            <fieldset>
+                <legend>Otros</legend>
+                    <label>¿Por qué quieres conrtactar?</label>
+                    <select name="why" id="why">
+                        <option value="1"> Tarea</option>
+                        <option value="2"> Trabajo</option>
+                        <option value="3"> Más información</option>
+                    </select>
+                <div>
+                    <label for="term">¿Aceptas los términos?</label>
+                    <input type="=checkbox" id="term" name="term" required>
+                </div>
+
+            </fieldset>
+            <button> Enviar contacto</button>
+        
+        </form>    
+    </section>
+
+    </main>
+</body>
+</html>
